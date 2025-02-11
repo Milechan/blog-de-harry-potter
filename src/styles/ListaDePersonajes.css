@@ -1,0 +1,4 @@
+.contenedor-Personajes{
+display:flex;
+flex-direction: row;
+}
