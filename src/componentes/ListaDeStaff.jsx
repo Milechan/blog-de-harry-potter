@@ -5,22 +5,21 @@ import { Context } from "../store/AppContext"
 import Navbar from "./Navbar"
 import "../styles/ListaDeStaff.css"
 
-const ListaDeStaff= () => {
+const ListaDeStaff = () => {
     const { actions, store } = useContext(Context)
     useEffect(() => {
         actions.obtenerStaff()
     }, [])
     return (
         <div>
-            <Navbar />
-           
-            <div className="contenedor-Staff">
-                 {store.staff.map((staff) => {
+            <div className="scroll-container">
+                <div className="contenedor-Staff">
+                    {store.staff.map((staff) => {
 
-                return <CartaDeStaff staff={staff} />
-            })}
+                        return <CartaDeStaff staff={staff} />
+                    })}
+                </div>
             </div>
-           
         </div>
     )
 }

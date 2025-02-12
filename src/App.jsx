@@ -7,6 +7,7 @@ import ListaDePersonajes from './componentes/ListaDePersonajes'
 import imagendefondo from "./assets/Tcui.gif"
 import ListaDeHechizos from './componentes/ListaDeHechizos.JSX'
 import ListaDeStaff from './componentes/ListaDeStaff'
+import Navbar from './componentes/Navbar'
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
     <>
       <img className="fondoDePagina" src={imagendefondo} alt="fondoo" />
       <BrowserRouter>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/personajes" element={<ListaDePersonajes />} />

@@ -12,7 +12,6 @@ const ListaDeHechizos = () => {
     }, [])
     return (
         <div>
-            <Navbar />
             <h1 className="tituloDeHechizos">Hechizos</h1>
             <div className="contenedor-Tarjetas">
                  {store.hechizos.map((hechizo) => {

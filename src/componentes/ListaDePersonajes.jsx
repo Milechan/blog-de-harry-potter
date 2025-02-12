@@ -12,15 +12,14 @@ const ListaDePersonajes = () => {
     }, [])
     return (
         <div>
-            <Navbar />
-           
-            <div className="contenedor-Personajes">
-                 {store.personajes.map((personaje) => {
+            <div className="scroll-container">
+                <div className="contenedor-Personajes">
+                    {store.personajes.map((personaje) => {
 
-                return <CartaDePersonaje personaje={personaje} />
-            })}
+                        return <CartaDePersonaje personaje={personaje} />
+                    })}
+                </div>
             </div>
-           
         </div>
     )
 }

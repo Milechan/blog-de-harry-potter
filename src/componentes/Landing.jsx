@@ -5,10 +5,8 @@ import "../styles/Landing.css"
 
 const Landing =() => {
     return(<div>
-        <Navbar/>
         <div className="contenedor-img">
             <img className="harryPotter" src={fondo} alt="logodeharry" />
-        
         </div>
         
     </div>)
