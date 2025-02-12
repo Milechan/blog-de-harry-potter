@@ -13,7 +13,7 @@ const ListaDePersonajes = () => {
     return (
         <div>
             <Navbar />
-            <h1>Personajes</h1>
+           
             <div className="contenedor-Personajes">
                  {store.personajes.map((personaje) => {
 

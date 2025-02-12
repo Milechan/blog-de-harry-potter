@@ -1,0 +1,40 @@
+.card-staff{
+    background-color: rgba(128, 130, 224,0.6);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 30px;
+    min-width: 350px;
+    min-height: 250px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 30px;
+    margin-top: 40px;
+}
+.nombreDeStaff{
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 800;
+    color: rgb(48, 46, 46);
+    margin-bottom: 10px;
+    padding: 2px;
+}
+.detalleTituloStaff{
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 10px;
+}
+
+.detalleValorStaff{
+font-size: 15px;
+font-weight: 35px;
+
+}
+.imagenstaff{
+    width: 120px;
+    height: 170px;
+    border-radius: 20px;
+    border: 2px solid black;
+    margin-left: 60px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
