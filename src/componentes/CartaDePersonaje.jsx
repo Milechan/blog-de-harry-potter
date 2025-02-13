@@ -5,7 +5,7 @@ import { useContext } from 'react'
 import { Context } from '../store/AppContext'
 
 const CartaDePersonaje = (props) => {
-    const{actions}=useContext(Context)
+    const { actions } = useContext(Context)
     function personajeFavorito(personaje) {
         actions.agregarPersonajeFavorito(personaje)
     }
@@ -17,11 +17,11 @@ const CartaDePersonaje = (props) => {
                 <div className='detalleValor'>{props.personaje.alternate_names.length>0?props.personaje.alternate_names:"No tiene Apodos"}</div>
             </div> */}
             <div className="detalle">
-                <div className="detalleTitulo"><strong>especie:</strong></div>
+                <div className="detalleTitulo"><strong>Especie:</strong></div>
                 <div className='detalleValor'>{props.personaje.species === "" ? "No se sabe" : props.personaje.species}</div>
             </div>
             <div className="detalle">
-                <div className="detalleTitulo"><strong>genero:</strong></div>
+                <div className="detalleTitulo"><strong>Genero:</strong></div>
                 <div className='detalleValor'>{props.personaje.gender === "" ? "No se sabe" : props.personaje.gender}</div>
             </div>
             <div className="detalle">
@@ -29,7 +29,7 @@ const CartaDePersonaje = (props) => {
                 <div className='detalleValor'>{props.personaje.house === "" ? "No pertenece a una Casa" : props.personaje.house}</div>
             </div>
             <div className="detalle">
-                <div className="detalleTitulo"><strong>fecha de Cumpleaños:</strong></div>
+                <div className="detalleTitulo"><strong>Fecha de Cumpleaños:</strong></div>
                 <div className='detalleValor'>{props.personaje.dateOfBirth === null ? "No se sabe" : props.personaje.dateOftBirth}</div>
             </div>
             <div className="detalle">
@@ -56,7 +56,7 @@ const CartaDePersonaje = (props) => {
             </div>
 
             <div className="detalle">
-                <div className="detalleTitulo"><strong>patronus:</strong></div>
+                <div className="detalleTitulo"><strong>Patronus:</strong></div>
                 <div className='detalleValor'>{props.personaje.patronus ? props.personaje.patronus : "No tiene Patronus"}</div>
             </div>
 
@@ -76,11 +76,10 @@ const CartaDePersonaje = (props) => {
             </div> */}
             <img className="imagenPersonaje" src={props.personaje.image ? props.personaje.image : sinfoto} alt="imagen del personaje" />
 
-            <div className="contenedor-boton-personaje">
-
-                <button class=" boton-personajes btn btn-primary"onClick={()=>personajeFavorito(props.personaje)}>Favorito <i class="fa-solid fa-heart"></i></button>
+            <div className="contenedor-boton-personaje" onClick={() => personajeFavorito(props.personaje)}>
+                Favorito <i class="fa-solid fa-heart ms-2"></i>
             </div>
-        </div>
+        </div >
     )
 }
 export default CartaDePersonaje

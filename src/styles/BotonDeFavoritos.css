@@ -1,29 +1,52 @@
 .contenedor-boton-staff {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 20px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: rgb(100, 100, 224);
+    color: white;
 }
 
 .contenedor-boton-personaje {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    align-items: center;
+    /* margin-top: 20px; */
+    margin: 18px auto;
+    height: 50px;
+    width: 350px;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: rgb(100, 100, 224);
+    color: white;
 }
 
-.boton-hechizos {
+.contenedor-boton-hechizo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 20px; */
+    margin: 18px auto;
+    height: 50px;
+    width: 350px;
     border: 2px solid white;
-    background-color: grey;
     border-radius: 20px;
+    background-color: rgb(100, 100, 224);
+    color: white;
 }
-
-.boton-Staff {
+.contenedor-boton-hechizo-fav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 20px; */
+    margin: 18px auto;
+    height: 50px;
+    width: 350px;
     border: 2px solid white;
-    background-color: grey;
     border-radius: 20px;
-}
-
-.boton-personajes {
-    border: 2px solid white;
-    background-color: grey;
-    border-radius: 20px;
+    background-color: rgb(224, 100, 100);
+    color: white;
 }

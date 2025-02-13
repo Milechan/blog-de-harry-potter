@@ -12,14 +12,15 @@ const ListaDeHechizos = () => {
     }, [])
     return (
         <div>
-            <h1 className="tituloDeHechizos">Hechizos</h1>
-            <div className="contenedor-Tarjetas">
-                 {store.hechizos.map((hechizo) => {
+            <div className="scroll-container-hechizos">
+                <h1 className="tituloDeHechizos">Hechizos</h1>
+                <div className="contenedor-Tarjetas">
+                    {store.hechizos.map((hechizo) => {
 
-                return <CartaDeHechizos hechizo={hechizo} />
-            })}
+                        return <CartaDeHechizos hechizo={hechizo} />
+                    })}
+                </div>
             </div>
-           
         </div>
     )
 }

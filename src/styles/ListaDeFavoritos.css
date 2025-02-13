@@ -1,0 +1,154 @@
+.contenedor-favoritos{
+    height: 93vh;
+}
+.scroll-favoritos {
+    height: 100%;
+    overflow-y: auto;
+    white-space: nowrap;
+}
+
+/* Personalización para navegadores WebKit */
+.scroll-favoritos::-webkit-scrollbar {
+    width: 25px;
+    /* Altura de la barra de desplazamiento horizontal */
+}
+
+.scroll-favoritos::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.);
+    /* Color de fondo del track */
+}
+
+.scroll-favoritos::-webkit-scrollbar-thumb {
+    background-color: #888;
+    /* Color de la "thumb" o parte que se desplaza */
+    border-radius: 3px;
+    width: 50px;
+    /* Bordes redondeados */
+    border: 2px solid #f0f0f0;
+    /* Espacio alrededor de la "thumb" */
+}
+
+.scroll-favoritos::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+    /* Cambio de color al pasar el mouse */
+}
+
+.contenedor-hechizos {
+    display: flex;
+    flex-direction: column;
+    align-content: start;
+    flex-wrap: wrap;
+    height: 300px;
+}
+
+.scroll-hechizos {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+/* Personalización para navegadores WebKit */
+.scroll-hechizos::-webkit-scrollbar {
+    height: 25px;
+    /* Altura de la barra de desplazamiento horizontal */
+}
+
+.scroll-hechizos::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.);
+    /* Color de fondo del track */
+}
+
+.scroll-hechizos::-webkit-scrollbar-thumb {
+    background-color: #888;
+    /* Color de la "thumb" o parte que se desplaza */
+    border-radius: 3px;
+    width: 50px;
+    /* Bordes redondeados */
+    border: 2px solid #f0f0f0;
+    /* Espacio alrededor de la "thumb" */
+}
+
+.scroll-hechizos::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+    /* Cambio de color al pasar el mouse */
+}
+
+.contenedor-personajes {
+    display: flex;
+    flex-direction: column;
+    align-content: start;
+    flex-wrap: wrap;
+    height: 300px;
+}
+
+.scroll-personajes {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+/* Personalización para navegadores WebKit */
+.scroll-personajes::-webkit-scrollbar {
+    height: 25px;
+    /* Altura de la barra de desplazamiento horizontal */
+}
+
+.scroll-personajes::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.);
+    /* Color de fondo del track */
+}
+
+.scroll-personajes::-webkit-scrollbar-thumb {
+    background-color: #888;
+    /* Color de la "thumb" o parte que se desplaza */
+    border-radius: 3px;
+    width: 50px;
+    /* Bordes redondeados */
+    border: 2px solid #f0f0f0;
+    /* Espacio alrededor de la "thumb" */
+}
+
+.scroll-personajes::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+    /* Cambio de color al pasar el mouse */
+}
+
+.contenedor-staff {
+    display: flex;
+    flex-direction: column;
+    align-content: start;
+    flex-wrap: wrap;
+    height: 300px;
+}
+
+.scroll-staff {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+/* Personalización para navegadores WebKit */
+.scroll-staff::-webkit-scrollbar {
+    height: 25px;
+    /* Altura de la barra de desplazamiento horizontal */
+}
+
+.scroll-staff::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.);
+    /* Color de fondo del track */
+}
+
+.scroll-staff::-webkit-scrollbar-thumb {
+    background-color: #888;
+    /* Color de la "thumb" o parte que se desplaza */
+    border-radius: 3px;
+    width: 50px;
+    /* Bordes redondeados */
+    border: 2px solid #f0f0f0;
+    /* Espacio alrededor de la "thumb" */
+}
+
+.scroll-staff::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+    /* Cambio de color al pasar el mouse */
+}

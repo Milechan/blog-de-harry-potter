@@ -1,82 +1,92 @@
 export default function getState({ getStore, getActions, setStore }) {
     return {
         store: {
-            personajes:[],
-            hechizos:[],
-            staff:[],
-            hechizosFavoritos:[],
-            personajesFavoritos:[],
-            staffFavoritos:[]
+            personajes: [],
+            hechizos: [],
+            staff: [],
+            hechizosFavoritos: [],
+            personajesFavoritos: [],
+            staffFavoritos: []
         },
         actions: {
-            obtenerPersonajes:async ()=>{
+            obtenerPersonajes: async () => {
                 try {
-                    const request= await fetch("https://hp-api.onrender.com/api/characters",{
-                        method:"GET"
+                    const request = await fetch("https://hp-api.onrender.com/api/characters", {
+                        method: "GET"
 
                     })
-                    const data=await request.json()
+                    const data = await request.json()
                     console.log(data)
                     setStore({
-                        personajes:data
+                        personajes: data
                     })
                 } catch (error) {
                     console.error("no se puedo obtener personajes")
                     console.error(error)
                 }
             },
-            obtenerHechizos:async()=>{
+            obtenerHechizos: async () => {
                 try {
-                    const request= await fetch("https://hp-api.onrender.com/api/spells",{
-                        method:"GET"
+                    const request = await fetch("https://hp-api.onrender.com/api/spells", {
+                        method: "GET"
 
                     })
-                    const data=await request.json()
-                    console.log(data)
+                    const data = await request.json()
+                    // console.log(data)
                     setStore({
-                        hechizos:data
+                        hechizos: data
                     })
                 } catch (error) {
                     console.error("No se pudieron obtener los hechizos")
                     console.error(error)
                 }
             },
-            obtenerStaff:async()=>{
+            obtenerStaff: async () => {
                 try {
-                    const request= await fetch("https://hp-api.onrender.com/api/characters/staff",{
-                        method:"GET"
+                    const request = await fetch("https://hp-api.onrender.com/api/characters/staff", {
+                        method: "GET"
 
                     })
-                    const data=await request.json()
+                    const data = await request.json()
                     console.log(data)
                     setStore({
-                        staff:data
+                        staff: data
                     })
                 } catch (error) {
                     console.error("no se logro tener el staff")
                     console.error(error)
                 }
             },
-            agregarHechizoFavorito:(hechizo)=>{
-                const favoritosActuales=getStore().hechizosFavoritos
+            agregarHechizoFavorito: (hechizo) => {
+                console.log("agregarHechizoFavorito")
+                const favoritosActuales = getStore().hechizosFavoritos
                 setStore({
-                    hechizosFavoritos:[ ...favoritosActuales, hechizo]
+                    hechizosFavoritos: [...favoritosActuales, hechizo]
                 })
             },
-            agregarPersonajeFavorito:(personaje)=>{
-                const favoritosActuales=getStore().personajesFavoritos
+            eliminarHechizoFavorito: (hechizo) => {
+                console.log("eliminarHechizoFavorito")
+                const favoritosActuales = getStore().hechizosFavoritos
                 setStore({
-                    personajesFavoritos:[ ...favoritosActuales, personaje]
+                    hechizosFavoritos: favoritosActuales.filter((fav) => fav !== hechizo)
+                })
+                let test = getStore()
+                console.log(test);
+                
+            },
+            agregarPersonajeFavorito: (personaje) => {
+                const favoritosActuales = getStore().personajesFavoritos
+                setStore({
+                    personajesFavoritos: [...favoritosActuales, personaje]
                 })
             },
-            agregarStaffFavorito:(staff)=>{
-                const favoritosActuales=getStore().staffFavoritos
+            agregarStaffFavorito: (staff) => {
+                const favoritosActuales = getStore().staffFavoritos
                 setStore({
-                    staffFavoritos:[ ...favoritosActuales, staff]
+                    staffFavoritos: [...favoritosActuales, staff]
                 })
             }
 
         }
     }
 }
-    

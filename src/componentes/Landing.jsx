@@ -6,7 +6,7 @@ import "../styles/Landing.css"
 const Landing =() => {
     return(<div>
         <div className="contenedor-img">
-            <img className="harryPotter" src={fondo} alt="logodeharry" />
+            <a href="https://www.harrypotter.com/es" target="_blank"><img className="harryPotter" src={fondo} alt="logodeharry" /></a>
         </div>
         
     </div>)

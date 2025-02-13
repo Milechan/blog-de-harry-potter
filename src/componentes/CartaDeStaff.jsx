@@ -6,20 +6,20 @@ import { Context } from "../store/AppContext"
 
 
 const CartaDeStaff = (props) => {
-const{actions}=useContext(Context)
+    const { actions } = useContext(Context)
     function StaffFavorito(staff) {
-        actions.agregarPersonajeFavorito(staff)
+        actions.agregarStaffFavorito(staff)
     }
     return (
         <div className="card-staff" key={props.staff.id}>
             <div className="nombreDeStaff">{props.staff.name}</div>
-            
+
             <div className="detalle">
-                <div className="detalleTituloStaff"><strong>especie:</strong></div>
+                <div className="detalleTituloStaff"><strong>Especie:</strong></div>
                 <div className='detalleValorStaff'>{props.staff.species === "" ? "No se sabe" : props.staff.species}</div>
             </div>
             <div className="detalle">
-                <div className="detalleTituloStaff"><strong>genero:</strong></div>
+                <div className="detalleTituloStaff"><strong>Genero:</strong></div>
                 <div className='detalleValorStaff'>{props.staff.gender === "" ? "No se sabe" : props.staff.gender}</div>
             </div>
             <div className="detalle">
@@ -29,9 +29,9 @@ const{actions}=useContext(Context)
             <div className="contenedor-imagen">
                 <img className="imagenstaff" src={props.staff.image ? props.staff.image : sinfoto} alt="imagen del staff" />
             </div>
-            <div className="contenedor-boton-staff">
+            <div className="contenedor-boton-staff" onClick={() => StaffFavorito(props.staff)}>
+                Favorito <i class="fa-solid fa-heart ms-2"></i>
 
-                <button class=" boton-staff btn btn-primary"onClick={()=>StaffFavorito}> Favorito <i class="fa-solid fa-heart"></i> </button>
             </div>
         </div>
     )
