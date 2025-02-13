@@ -1,7 +1,9 @@
 .contenedor-Tarjetas {
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    min-height: 500px;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    max-height: 100px;
+    min-width: 600px;
     margin-bottom: 10px;
+
 }

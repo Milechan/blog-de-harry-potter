@@ -11,16 +11,13 @@ const ListaDeStaff = () => {
         actions.obtenerStaff()
     }, [])
     return (
-        <div>
-            <div className="scroll-container">
+            <div className="scroll-container-staff">
                 <div className="contenedor-Staff">
                     {store.staff.map((staff) => {
-
                         return <CartaDeStaff staff={staff} />
                     })}
                 </div>
             </div>
-        </div>
     )
 }
 export default ListaDeStaff

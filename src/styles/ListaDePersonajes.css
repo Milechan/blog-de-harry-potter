@@ -3,24 +3,24 @@
     flex-direction: row;
 }
 
-.scroll-container {
+.scroll-container-personajes {
     width: 100%;
     overflow-x: auto;
     white-space: nowrap;
 }
 
 /* Personalización para navegadores WebKit */
-.scroll-container::-webkit-scrollbar {
+.scroll-container-personajes::-webkit-scrollbar {
     height: 25px;
     /* Altura de la barra de desplazamiento horizontal */
 }
 
-.scroll-container::-webkit-scrollbar-track {
+.scroll-container-personajes::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0.);
     /* Color de fondo del track */
 }
 
-.scroll-container::-webkit-scrollbar-thumb {
+.scroll-container-personajes::-webkit-scrollbar-thumb {
     background-color: #888;
     /* Color de la "thumb" o parte que se desplaza */
     border-radius: 3px;
@@ -30,7 +30,7 @@
     /* Espacio alrededor de la "thumb" */
 }
 
-.scroll-container::-webkit-scrollbar-thumb:hover {
+.scroll-container-personajes::-webkit-scrollbar-thumb:hover {
     background-color: #555;
     /* Cambio de color al pasar el mouse */
 }

@@ -3,7 +3,10 @@ export default function getState({ getStore, getActions, setStore }) {
         store: {
             personajes:[],
             hechizos:[],
-            staff:[]
+            staff:[],
+            hechizosFavoritos:[],
+            personajesFavoritos:[],
+            staffFavoritos:[]
         },
         actions: {
             obtenerPersonajes:async ()=>{
@@ -53,6 +56,24 @@ export default function getState({ getStore, getActions, setStore }) {
                     console.error("no se logro tener el staff")
                     console.error(error)
                 }
+            },
+            agregarHechizoFavorito:(hechizo)=>{
+                const favoritosActuales=getStore().hechizosFavoritos
+                setStore({
+                    hechizosFavoritos:[ ...favoritosActuales, hechizo]
+                })
+            },
+            agregarPersonajeFavorito:(personaje)=>{
+                const favoritosActuales=getStore().personajesFavoritos
+                setStore({
+                    personajesFavoritos:[ ...favoritosActuales, personaje]
+                })
+            },
+            agregarStaffFavorito:(staff)=>{
+                const favoritosActuales=getStore().staffFavoritos
+                setStore({
+                    staffFavoritos:[ ...favoritosActuales, staff]
+                })
             }
 
         }

@@ -8,6 +8,7 @@ import imagendefondo from "./assets/Tcui.gif"
 import ListaDeHechizos from './componentes/ListaDeHechizos.JSX'
 import ListaDeStaff from './componentes/ListaDeStaff'
 import Navbar from './componentes/Navbar'
+import ListaDeFavoritos from './componentes/ListaDeFavoritos'
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/personajes" element={<ListaDePersonajes />} />
           <Route path="/staff" element={<ListaDeStaff />} />
           <Route path="/hechizos" element={<ListaDeHechizos />} />
+          <Route path="/favoritos" element={<ListaDeFavoritos/>}/>
         </Routes>
       </BrowserRouter>
     </>

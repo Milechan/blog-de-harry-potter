@@ -1,0 +1,29 @@
+.contenedor-boton-staff {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.contenedor-boton-personaje {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.boton-hechizos {
+    border: 2px solid white;
+    background-color: grey;
+    border-radius: 20px;
+}
+
+.boton-Staff {
+    border: 2px solid white;
+    background-color: grey;
+    border-radius: 20px;
+}
+
+.boton-personajes {
+    border: 2px solid white;
+    background-color: grey;
+    border-radius: 20px;
+}

@@ -12,7 +12,7 @@ const ListaDePersonajes = () => {
     }, [])
     return (
         <div>
-            <div className="scroll-container">
+            <div className="scroll-container-personajes">
                 <div className="contenedor-Personajes">
                     {store.personajes.map((personaje) => {
 
