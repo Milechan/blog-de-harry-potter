@@ -1,13 +1,16 @@
 .card-hechizos{
    
     border: 3px solid black;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
     background-color: rgba(196, 191, 187, 0.788);
     margin-bottom: 20px;
     border-radius: 10px;
-    padding: 5px;
-    width: 500px;
+    padding: 10px;
+    width: 610px;
+    height:280px ;
+margin-top: 30px;
+
     
 }
 .detalleHechizo{
@@ -17,9 +20,13 @@ font-weight: 10px;
 .detalleContenido{
     font-size: 20px;
     font-weight: 10px;
+    text-wrap: wrap;
 }
 
 .tituloDeHechizos{
     margin-left: 50px;
     margin-bottom: 30px;
+}
+.detalleHechizoText{
+    font-weight: 600;
 }

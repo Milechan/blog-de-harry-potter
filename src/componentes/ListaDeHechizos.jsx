@@ -13,7 +13,7 @@ const ListaDeHechizos = () => {
     return (
         <div>
             <div className="scroll-container-hechizos">
-                <h1 className="tituloDeHechizos">Hechizos</h1>
+              
                 <div className="contenedor-Tarjetas">
                     {store.hechizos.map((hechizo) => {
 

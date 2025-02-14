@@ -3,6 +3,7 @@ import sinfoto from "../assets/sinfoto.jpg"
 import "../styles/CartaDeHechizos.css"
 import "../styles/botonDeFavoritos.css"
 import { Context } from "../store/AppContext"
+import "../styles/FavoritosTitulos.css"
 
 const CartaDeHechizos = (props) => {
     const { actions, store } = useContext(Context)
@@ -30,7 +31,7 @@ const CartaDeHechizos = (props) => {
                 <div className="detalleHechizo"><strong>Nombre: </strong></div>
                 <div className='detalleContenido'>{props.hechizo.name}</div>
             </div>
-            <div className="detalle">
+            <div className="detalleHechizoText">
                 <div className="detalleHechizo"><strong>Descripcion: </strong></div>
                 <div className='detalleContenido'>{props.hechizo.description}</div>
             </div>

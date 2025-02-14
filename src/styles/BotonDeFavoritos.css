@@ -20,7 +20,7 @@
     width: 350px;
     border: 2px solid white;
     border-radius: 20px;
-    background-color: rgb(100, 100, 224);
+    background-color: rgb(126, 126, 189);
     color: white;
 }
 
@@ -30,12 +30,13 @@
     align-items: center;
     /* margin-top: 20px; */
     margin: 18px auto;
-    height: 50px;
-    width: 350px;
+    height: 40px;
+    width: 120px;
     border: 2px solid white;
     border-radius: 20px;
-    background-color: rgb(100, 100, 224);
+    background-color: rgb(77, 77, 83);
     color: white;
+    margin-top: 10px;
 }
 .contenedor-boton-hechizo-fav {
     display: flex;
@@ -44,9 +45,10 @@
     /* margin-top: 20px; */
     margin: 18px auto;
     height: 50px;
-    width: 350px;
+    width: 150px;
     border: 2px solid white;
     border-radius: 20px;
     background-color: rgb(224, 100, 100);
     color: white;
+    margin-top: 20px;
 }

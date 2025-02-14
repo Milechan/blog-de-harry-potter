@@ -12,7 +12,7 @@ const ListaDeFavoritos = () => {
         <div className="scroll-favoritos">
             <div className="contenedor-favoritos">
                 <div className="scroll-hechizos">
-                    <h1>hechizos</h1>
+                    <h1 className="HechizoFavorito">Hechizos</h1>
                     <div className="contenedor-hechizos">
                         {store.hechizosFavoritos.map((favorito) => {
                             return <CartaDeFavoritos favorito={favorito} />
@@ -20,7 +20,7 @@ const ListaDeFavoritos = () => {
                     </div>
                 </div>
                 <div className="scroll-personajes">
-                    <h1>personajes</h1>
+                    <h1 className="PersonajeFavorito">Personajes</h1>
                     <div className="contenedor-personajes">
                         {store.personajesFavoritos.map((favorito) => {
                             return <CartaDeFavoritos favorito={favorito} />
@@ -28,7 +28,7 @@ const ListaDeFavoritos = () => {
                     </div>
                 </div>
                 <div className="scroll-staff">
-                    <h1>staff</h1>
+                    <h1 className="staffFavorito">Staff</h1>
                     <div className="contenedor-staff">
                         {store.staffFavoritos.map((favorito) => {
                             return <CartaDeFavoritos favorito={favorito} />
