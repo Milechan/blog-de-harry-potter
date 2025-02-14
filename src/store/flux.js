@@ -2,6 +2,7 @@ export default function getState({ getStore, getActions, setStore }) {
     return {
         store: {
             personajes: [],
+            infoPersonaje: {},
             hechizos: [],
             staff: [],
             hechizosFavoritos: [],
@@ -23,6 +24,21 @@ export default function getState({ getStore, getActions, setStore }) {
                 } catch (error) {
                     console.error("no se puedo obtener personajes")
                     console.error(error)
+                }
+            },
+            obtenerInfoPersonaje: async (idPersonaje) => {
+                try {
+                    const request = await fetch(`https://hp-api.onrender.com/api/character/${idPersonaje}`, {
+                        method: "GET"
+                    })
+                    const data = await request.json()
+                    setStore({
+                        infoPersonaje: {...data[0]}
+                    })
+                } catch (error) {
+                    console.error('no se obtuvo la informacion del personaje: ', idPersonaje);
+                    console.error(error);
+
                 }
             },
             obtenerHechizos: async () => {
@@ -72,7 +88,7 @@ export default function getState({ getStore, getActions, setStore }) {
                 })
                 let test = getStore()
                 console.log(test);
-                
+
             },
             agregarPersonajeFavorito: (personaje) => {
                 const favoritosActuales = getStore().personajesFavoritos

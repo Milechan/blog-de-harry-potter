@@ -1,8 +1,9 @@
 import { useContext, useEffect } from "react"
 import Navbar from "./Navbar"
 import { Context } from "../store/AppContext"
-import CartaDePersonaje from "./CartaDePersonaje"
 import "../styles/ListaDePersonajes.css"
+import InfoPersonaje from "./InfoPersonaje"
+import CartaDePersonaje from "./CartaDePersonaje"
 
 const ListaDePersonajes = () => {
     const { actions, store } = useContext(Context)
@@ -15,7 +16,8 @@ const ListaDePersonajes = () => {
             <div className="scroll-container-personajes">
                 <div className="contenedor-Personajes">
                     {store.personajes.map((personaje) => {
-
+                        
+                        // return <InfoPersonaje personaje={personaje} />
                         return <CartaDePersonaje personaje={personaje} />
                     })}
                 </div>

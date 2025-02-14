@@ -9,6 +9,7 @@ import ListaDeHechizos from './componentes/ListaDeHechizos.JSX'
 import ListaDeStaff from './componentes/ListaDeStaff'
 import Navbar from './componentes/Navbar'
 import ListaDeFavoritos from './componentes/ListaDeFavoritos'
+import InfoPersonaje from './componentes/InfoPersonaje'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/personajes" element={<ListaDePersonajes />} />
+          <Route path="/personaje/:id" element={<InfoPersonaje />} />
           <Route path="/staff" element={<ListaDeStaff />} />
           <Route path="/hechizos" element={<ListaDeHechizos />} />
           <Route path="/favoritos" element={<ListaDeFavoritos/>}/>
