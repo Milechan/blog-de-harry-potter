@@ -1,0 +1,10 @@
+*{
+    font-family: "Berkshire Swash";
+    /* font-weight: 400; */
+    font-style: normal;
+    text-shadow: 
+    -1px -1px 0 white,  
+     1px -1px 0 white,  
+    -1px  1px 0 white,  
+     1px  1px 0 white; /* Crea un borde blanco */
+}

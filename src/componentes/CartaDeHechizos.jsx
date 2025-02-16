@@ -8,6 +8,7 @@ import "../styles/FavoritosTitulos.css"
 const CartaDeHechizos = (props) => {
     const { actions, store } = useContext(Context)
     const [esFavorito, setEsFavorito] = useState(false)
+
     function hechizoFavorito(hechizo) {
         if (esFavorito) {
             actions.eliminarHechizoFavorito(hechizo)
@@ -36,7 +37,7 @@ const CartaDeHechizos = (props) => {
                 <div className='detalleContenido'>{props.hechizo.description}</div>
             </div>
             <div className={!esFavorito ? "contenedor-boton-hechizo" : "contenedor-boton-hechizo-fav"} onClick={() => hechizoFavorito(props.hechizo)}>
-                {!esFavorito ? "Favorito" : "Eliminar Favorito"}<i class="fa-solid fa-heart ms-2"></i>
+                {!esFavorito ? "Favorito" : "Eliminar Favorito"}<i className="fa-solid fa-heart ms-2"></i>
             </div>
         </div>
     )

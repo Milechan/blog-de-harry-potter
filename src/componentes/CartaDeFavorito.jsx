@@ -8,7 +8,7 @@ const CartaDeFavoritos = (props) => {
             <div className="nombreDeFavorito">{props.favorito.name}</div>
 
             <div className="contenedor-boton-favoritos">
-                <button class=" boton-favoritos btn btn-primary" onClick={() => alert("borrar favorito")}> Favorito <i class="fa-solid fa-heart"></i> </button>
+                <button className=" boton-favoritos btn btn-primary" onClick={() => alert("borrar favorito")}> Favorito <i className="fa-solid fa-heart"></i> </button>
             </div>
         </div>
     )

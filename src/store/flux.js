@@ -33,7 +33,7 @@ export default function getState({ getStore, getActions, setStore }) {
                     })
                     const data = await request.json()
                     setStore({
-                        infoPersonaje: {...data[0]}
+                        infoPersonaje: { ...data[0] }
                     })
                 } catch (error) {
                     console.error('no se obtuvo la informacion del personaje: ', idPersonaje);
@@ -79,15 +79,21 @@ export default function getState({ getStore, getActions, setStore }) {
                 setStore({
                     hechizosFavoritos: [...favoritosActuales, hechizo]
                 })
+                console.log("nuevos favoritos:", getStore().hechizosFavoritos);
+
             },
             eliminarHechizoFavorito: (hechizo) => {
-                console.log("eliminarHechizoFavorito")
+                console.log("eliminarHechizoFavorito:",hechizo)
                 const favoritosActuales = getStore().hechizosFavoritos
+                console.log("favoritosActuales:",favoritosActuales);
+                const favoritosFiltrados = favoritosActuales.filter((fav) => fav.id !== hechizo.id)
+                console.log('favoritosFiltrados:',favoritosFiltrados);
+
                 setStore({
-                    hechizosFavoritos: favoritosActuales.filter((fav) => fav !== hechizo)
+                    hechizosFavoritos: favoritosFiltrados
                 })
-                let test = getStore()
-                console.log(test);
+                 
+                console.log("nuevos hechizos fav",getStore().hechizosFavoritos);
 
             },
             agregarPersonajeFavorito: (personaje) => {
