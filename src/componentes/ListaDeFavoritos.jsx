@@ -15,7 +15,7 @@ const ListaDeFavoritos = () => {
                     <h1 className="HechizoFavorito">Hechizos</h1>
                     <div className="contenedor-hechizos">
                         {store.hechizosFavoritos.map((favorito) => {
-                            return <CartaDeFavoritos favorito={favorito} />
+                            return <CartaDeFavoritos favorito={favorito} tipo={'hechizo'}/>
                         })}
                     </div>
                 </div>
@@ -23,7 +23,7 @@ const ListaDeFavoritos = () => {
                     <h1 className="PersonajeFavorito">Personajes</h1>
                     <div className="contenedor-personajes">
                         {store.personajesFavoritos.map((favorito) => {
-                            return <CartaDeFavoritos favorito={favorito} />
+                            return <CartaDeFavoritos favorito={favorito} tipo={'personaje'}/>
                         })}
                     </div>
                 </div>
@@ -31,7 +31,7 @@ const ListaDeFavoritos = () => {
                     <h1 className="staffFavorito">Staff</h1>
                     <div className="contenedor-staff">
                         {store.staffFavoritos.map((favorito) => {
-                            return <CartaDeFavoritos favorito={favorito} />
+                            return <CartaDeFavoritos favorito={favorito} tipo={'staff'}/>
                         })}
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext, useEffect, useState } from "react"
 import sinfoto from "../assets/sinfoto.jpg"
 import "../styles/CartaDeStaff.css"
 import "../styles/botonDeFavoritos.css"
@@ -6,10 +6,25 @@ import { Context } from "../store/AppContext"
 
 
 const CartaDeStaff = (props) => {
-    const { actions } = useContext(Context)
+    const { actions, store } = useContext(Context)
+    const [esFavorito, setEsFavorito] = useState(false)
+
     function StaffFavorito(staff) {
-        actions.agregarStaffFavorito(staff)
+        if (esFavorito) {
+            actions.eliminarStaffFavorito(staff)
+            setEsFavorito(false)
+        } else {
+            actions.agregarStaffFavorito(staff)
+            setEsFavorito(true)
+        }
     }
+    useEffect(() => {
+        let favoritosActuales = store.staffFavoritos
+        let exists = favoritosActuales.filter((favorito) => favorito.id === props.staff.id)
+        if (exists.length > 0) {
+            setEsFavorito(true)
+        }
+    }, [])
     return (
         <div className="card-staff" key={props.staff.id}>
             <div className="nombreDeStaff">{props.staff.name}</div>
@@ -29,8 +44,8 @@ const CartaDeStaff = (props) => {
             <div className="contenedor-imagen">
                 <img className="imagenstaff" src={props.staff.image ? props.staff.image : sinfoto} alt="imagen del staff" />
             </div>
-            <div className="contenedor-boton-staff" onClick={() => StaffFavorito(props.staff)}>
-                Favorito <i class="fa-solid fa-heart ms-2"></i>
+            <div className={!esFavorito ? "contenedor-boton-staff" : "contenedor-boton-staff-fav"} onClick={() => StaffFavorito(props.staff)}>
+                {!esFavorito ? "Favorito" : "Eliminar Favorito"} <i className="fa-solid fa-heart ms-2"></i>
 
             </div>
         </div>

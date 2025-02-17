@@ -83,30 +83,64 @@ export default function getState({ getStore, getActions, setStore }) {
 
             },
             eliminarHechizoFavorito: (hechizo) => {
-                console.log("eliminarHechizoFavorito:",hechizo)
+                console.log("eliminarHechizoFavorito:", hechizo)
                 const favoritosActuales = getStore().hechizosFavoritos
-                console.log("favoritosActuales:",favoritosActuales);
+                console.log("favoritosActuales:", favoritosActuales);
                 const favoritosFiltrados = favoritosActuales.filter((fav) => fav.id !== hechizo.id)
-                console.log('favoritosFiltrados:',favoritosFiltrados);
+                console.log('favoritosFiltrados:', favoritosFiltrados);
 
                 setStore({
                     hechizosFavoritos: favoritosFiltrados
                 })
-                 
-                console.log("nuevos hechizos fav",getStore().hechizosFavoritos);
+
+                console.log("nuevos hechizos fav", getStore().hechizosFavoritos);
 
             },
-            agregarPersonajeFavorito: (personaje) => {
-                const favoritosActuales = getStore().personajesFavoritos
-                setStore({
-                    personajesFavoritos: [...favoritosActuales, personaje]
-                })
-            },
             agregarStaffFavorito: (staff) => {
+                console.log("agregarStaffFavorito")
                 const favoritosActuales = getStore().staffFavoritos
                 setStore({
                     staffFavoritos: [...favoritosActuales, staff]
                 })
+                console.log("nuevos favoritos:", getStore().staffFavoritos);
+
+            },
+            eliminarStaffFavorito: (staff) => {
+                console.log("eliminarStaffFavorito:", staff)
+                const favoritosActuales = getStore().staffFavoritos
+                console.log("favoritosActuales:", favoritosActuales);
+                const favoritosFiltrados = favoritosActuales.filter((fav) => fav.id !== staff.id)
+                console.log('favoritosFiltrados:', favoritosFiltrados);
+
+                setStore({
+                    staffFavoritos: favoritosFiltrados
+                })
+
+                console.log("nuevos staff fav", getStore().staffFavoritos);
+
+            },
+            agregarPersonajeFavorito: (personaje) => {
+                console.log("agregarPersonajeFavorito")
+                const favoritosActuales = getStore().personajesFavoritos
+                setStore({
+                    personajesFavoritos: [...favoritosActuales, personaje]
+                })
+                console.log("nuevos favoritos:", getStore().personajesFavoritos);
+
+            },
+            eliminarPersonajeFavorito: (personaje) => {
+                console.log("eliminarPersonajeFavorito:", personaje)
+                const favoritosActuales = getStore().personajesFavoritos
+                console.log("favoritosActuales:", favoritosActuales);
+                const favoritosFiltrados = favoritosActuales.filter((fav) => fav.id !== personaje.id)
+                console.log('favoritosFiltrados:', favoritosFiltrados);
+
+                setStore({
+                    personajesFavoritos: favoritosFiltrados
+                })
+
+                console.log("nuevos personaje fav", getStore().personajesFavoritos);
+
             }
 
         }

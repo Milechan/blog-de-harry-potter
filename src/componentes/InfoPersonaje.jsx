@@ -1,18 +1,30 @@
 import '../styles/InfoPersonaje.css'
 import sinfoto from "../assets/sinfoto.jpg"
 import "../styles/botonDeFavoritos.css"
-import { useContext, useEffect } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { Context } from '../store/AppContext'
 import { useParams } from 'react-router'
 
 const InfoPersonaje = () => {
     const { id } = useParams()
     const { store, actions } = useContext(Context)
+    const [esFavorito, setEsFavorito] = useState(false)
     useEffect(() => {
         actions.obtenerInfoPersonaje(id)
+        let favoritosActuales = store.personajesFavoritos
+        let exists = favoritosActuales.filter((favorito) => favorito.id === id)
+        if (exists.length > 0) {
+            setEsFavorito(true)
+        }
     }, [])
     function personajeFavorito(personaje) {
-        actions.agregarPersonajeFavorito(personaje)
+        if (esFavorito) {
+            actions.eliminarPersonajeFavorito(personaje)
+            setEsFavorito(false)
+        } else {
+            actions.agregarPersonajeFavorito(personaje)
+            setEsFavorito(true)
+        }
     }
     return (
         <>
@@ -89,8 +101,8 @@ const InfoPersonaje = () => {
                     </div>
                 </div >
             </div>
-            <div className="contenedor-boton-personaje" onClick={() => personajeFavorito(store.infoPersonaje)}>
-                Favorito <i className="fa-solid fa-heart ms-2"></i>
+            <div className={!esFavorito ? "contenedor-boton-personaje" : "contenedor-boton-personaje-fav"} onClick={() => personajeFavorito(store.infoPersonaje)}>
+                {!esFavorito ? "Favorito" : "Eliminar Favorito"}<i className="fa-solid fa-heart ms-2"></i>
             </div>
         </>
     )
